@@ -12,16 +12,18 @@
 		74414B381EA8645D000DD82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74414B361EA8645D000DD82E /* Main.storyboard */; };
 		74414B3A1EA8645D000DD82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74414B391EA8645D000DD82E /* Assets.xcassets */; };
 		74414B3D1EA8645D000DD82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74414B3B1EA8645D000DD82E /* LaunchScreen.storyboard */; };
+		74414B491EAAAA3C000DD82E /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 74414B481EAAAA3C000DD82E /* pokemon.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74414B2F1EA8645D000DD82E /* pokedex training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pokedex training.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74414B321EA8645D000DD82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74414B341EA8645D000DD82E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74414B341EA8645D000DD82E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "pokedex training/ViewController.swift"; sourceTree = "<group>"; };
 		74414B371EA8645D000DD82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74414B391EA8645D000DD82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74414B3C1EA8645D000DD82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74414B3E1EA8645D000DD82E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74414B481EAAAA3C000DD82E /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,9 @@
 		74414B261EA8645D000DD82E = {
 			isa = PBXGroup;
 			children = (
+				74414B451EAAA720000DD82E /* Model */,
+				74414B461EAAA72A000DD82E /* Controller */,
+				74414B471EAAA74D000DD82E /* View */,
 				74414B311EA8645D000DD82E /* pokedex training */,
 				74414B301EA8645D000DD82E /* Products */,
 			);
@@ -55,13 +60,35 @@
 			isa = PBXGroup;
 			children = (
 				74414B321EA8645D000DD82E /* AppDelegate.swift */,
-				74414B341EA8645D000DD82E /* ViewController.swift */,
 				74414B361EA8645D000DD82E /* Main.storyboard */,
 				74414B391EA8645D000DD82E /* Assets.xcassets */,
+				74414B481EAAAA3C000DD82E /* pokemon.csv */,
 				74414B3B1EA8645D000DD82E /* LaunchScreen.storyboard */,
 				74414B3E1EA8645D000DD82E /* Info.plist */,
 			);
 			path = "pokedex training";
+			sourceTree = "<group>";
+		};
+		74414B451EAAA720000DD82E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		74414B461EAAA72A000DD82E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74414B341EA8645D000DD82E /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		74414B471EAAA74D000DD82E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +153,7 @@
 			files = (
 				74414B3D1EA8645D000DD82E /* LaunchScreen.storyboard in Resources */,
 				74414B3A1EA8645D000DD82E /* Assets.xcassets in Resources */,
+				74414B491EAAAA3C000DD82E /* pokemon.csv in Resources */,
 				74414B381EA8645D000DD82E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
