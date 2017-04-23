@@ -47,14 +47,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mQU-es-fsS">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokeCell" id="mQU-es-fsS" customClass="PokeCell" customModule="pokedex_training" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="PVP-UK-rnB">
+                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="PVP-UK-rnB">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -79,6 +79,10 @@
                                             <constraint firstAttribute="trailing" secondItem="gSv-Sf-lop" secondAttribute="trailing" id="bK9-kX-G83"/>
                                             <constraint firstItem="gSv-Sf-lop" firstAttribute="leading" secondItem="mQU-es-fsS" secondAttribute="leading" id="ju6-Hd-1tu"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="gSv-Sf-lop" id="JLx-cg-QY2"/>
+                                            <outlet property="thumbImg" destination="PVP-UK-rnB" id="bTk-yD-nc3"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
