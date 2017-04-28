@@ -20,8 +20,9 @@
 		74414B551EAFDFAF000DD82E /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 74414B541EAFDFAF000DD82E /* music.png */; };
 		74414B571EAFDFBB000DD82E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74414B561EAFDFBB000DD82E /* music.mp3 */; };
 		74E7F0921EB19CCE00D294D4 /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E7F0911EB19CCE00D294D4 /* PokemonDetailVC.swift */; };
-		74E7F09B1EB3D2DD00D294D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E7F0991EB3D2DD00D294D4 /* Alamofire.framework */; };
-		74E7F09C1EB3D2DD00D294D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E7F09A1EB3D2DD00D294D4 /* SwiftyJSON.framework */; };
+		74E7F09E1EB3D43400D294D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E7F09D1EB3D43400D294D4 /* Constants.swift */; };
+		74E7F0A11EB3D91D00D294D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E7F09F1EB3D91D00D294D4 /* Alamofire.framework */; };
+		74E7F0A21EB3D91D00D294D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E7F0A01EB3D91D00D294D4 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +41,9 @@
 		74414B541EAFDFAF000DD82E /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
 		74414B561EAFDFBB000DD82E /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		74E7F0911EB19CCE00D294D4 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
-		74E7F0941EB3D10200D294D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../RainOrShine/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		74E7F0951EB3D10200D294D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../RainOrShine/Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		74E7F0991EB3D2DD00D294D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		74E7F09A1EB3D2DD00D294D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		74E7F09D1EB3D43400D294D4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74E7F09F1EB3D91D00D294D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		74E7F0A01EB3D91D00D294D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E7F09B1EB3D2DD00D294D4 /* Alamofire.framework in Frameworks */,
-				74E7F09C1EB3D2DD00D294D4 /* SwiftyJSON.framework in Frameworks */,
+				74E7F0A11EB3D91D00D294D4 /* Alamofire.framework in Frameworks */,
+				74E7F0A21EB3D91D00D294D4 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				74414B4E1EAFD79F000DD82E /* csv.swift */,
+				74E7F09D1EB3D43400D294D4 /* Constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -143,10 +144,8 @@
 		74E7F0931EB3D10200D294D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74E7F0991EB3D2DD00D294D4 /* Alamofire.framework */,
-				74E7F09A1EB3D2DD00D294D4 /* SwiftyJSON.framework */,
-				74E7F0941EB3D10200D294D4 /* Alamofire.framework */,
-				74E7F0951EB3D10200D294D4 /* SwiftyJSON.framework */,
+				74E7F09F1EB3D91D00D294D4 /* Alamofire.framework */,
+				74E7F0A01EB3D91D00D294D4 /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,6 +251,7 @@
 				74414B4B1EAAAB98000DD82E /* Pokemon.swift in Sources */,
 				74414B351EA8645D000DD82E /* ViewController.swift in Sources */,
 				74E7F0921EB19CCE00D294D4 /* PokemonDetailVC.swift in Sources */,
+				74E7F09E1EB3D43400D294D4 /* Constants.swift in Sources */,
 				74414B331EA8645D000DD82E /* AppDelegate.swift in Sources */,
 				74414B4F1EAFD79F000DD82E /* csv.swift in Sources */,
 			);
