@@ -20,6 +20,8 @@
 		74414B551EAFDFAF000DD82E /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = 74414B541EAFDFAF000DD82E /* music.png */; };
 		74414B571EAFDFBB000DD82E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74414B561EAFDFBB000DD82E /* music.mp3 */; };
 		74E7F0921EB19CCE00D294D4 /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E7F0911EB19CCE00D294D4 /* PokemonDetailVC.swift */; };
+		74E7F09B1EB3D2DD00D294D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E7F0991EB3D2DD00D294D4 /* Alamofire.framework */; };
+		74E7F09C1EB3D2DD00D294D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E7F09A1EB3D2DD00D294D4 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		74414B541EAFDFAF000DD82E /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
 		74414B561EAFDFBB000DD82E /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		74E7F0911EB19CCE00D294D4 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
+		74E7F0941EB3D10200D294D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../RainOrShine/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		74E7F0951EB3D10200D294D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../RainOrShine/Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		74E7F0991EB3D2DD00D294D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		74E7F09A1EB3D2DD00D294D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E7F09B1EB3D2DD00D294D4 /* Alamofire.framework in Frameworks */,
+				74E7F09C1EB3D2DD00D294D4 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 			children = (
 				74414B311EA8645D000DD82E /* pokedex training */,
 				74414B301EA8645D000DD82E /* Products */,
+				74E7F0931EB3D10200D294D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +140,17 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		74E7F0931EB3D10200D294D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74E7F0991EB3D2DD00D294D4 /* Alamofire.framework */,
+				74E7F09A1EB3D2DD00D294D4 /* SwiftyJSON.framework */,
+				74E7F0941EB3D10200D294D4 /* Alamofire.framework */,
+				74E7F0951EB3D10200D294D4 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +161,7 @@
 				74414B2B1EA8645D000DD82E /* Sources */,
 				74414B2C1EA8645D000DD82E /* Frameworks */,
 				74414B2D1EA8645D000DD82E /* Resources */,
+				74E7F0981EB3D17C00D294D4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -203,6 +224,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74E7F0981EB3D17C00D294D4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		74414B2B1EA8645D000DD82E /* Sources */ = {
@@ -338,6 +377,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68FLA3XZ62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/App\\ Programming/iOS/DevSlopes/RainOrShine/Carthage/Build/iOS",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/App\\ Programming/iOS/DevSlopes/RainOrShine/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "pokedex training/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sakota.pokedex-training";
@@ -351,6 +396,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68FLA3XZ62;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/App\\ Programming/iOS/DevSlopes/RainOrShine/Carthage/Build/iOS",
+					"$(USER_LIBRARY_DIR)/Mobile\\ Documents/com~apple~CloudDocs/App\\ Programming/iOS/DevSlopes/RainOrShine/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "pokedex training/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sakota.pokedex-training";
