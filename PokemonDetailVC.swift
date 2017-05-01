@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PokemonDetailVC: UIViewController {
     
@@ -29,7 +30,7 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLbl.text = pokemon.name
+        nameLbl.text = pokemon.name.capitalized
         
         pokemon.downloadPokemonDetail {
             
@@ -40,8 +41,28 @@ class PokemonDetailVC: UIViewController {
     
     func updateUI() {
         
+        attackLbl.text = pokemon.attack
+        defenseLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weight
+        mainImg.image = UIImage(named: "\(self.pokemon.pokedexID)")
+        pokedexIDLbl.text = "\(pokemon.pokedexID)"
+        currentEvoImg.image = mainImg.image
+        typeLbl.text = pokemon.type
+        descriptionLbl.text = pokemon.description
         
+        if pokemon.nextEvolutionId == "" {
+            
+            evoLbl.text = "No Additional Evolutions"
+            nextEvoImg.isHidden = true
+        } else {
+            nextEvoImg.isHidden = false
+            nextEvoImg.image = UIImage(named: pokemon.nextEvolutionId)
+            let str = "Next Evolution: \(pokemon.nextEvolutionName) - LVL \(pokemon.nextEvolutionLvl)"
+            evoLbl.text = str
+        }
     }
+    
 
     @IBAction func backBtnPressed(_ sender: UIButton) {
         
